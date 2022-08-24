@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<title>Page title</title>
+				<style>
+       html {
+  height: 325px;
+}
+body {
+  min-height: 325px;
+  background-color: #8098ff;
+  margin: 0px; 
+  padding: 0px;
+  text-align: center;
+}								
+															
+				
+									.container { 						
+background-color: #8098ff;
+font-weight: bold;  
+width: 720px; 
+height: 325px;
+position: relative;
+border-radius:1px; 	
+border:2px solid #8098ff;
+margin-top: 110px; 
+
+
+} 
+				
+				.logo	{
+				margin-top: 80px; 
+				
+				}	
+				
+				.box {
+			width: 350px;
+			height:30px;
+			font-size:20px;
+			border-radius:6px; 	
+     border:1px solid blue;
+     text-align: center;
+				
+				}					
+				
+				.buttonlo {
+			 width: 70px;
+			 height:35px;
+			 border-radius:6px; 	
+      border:1px solid blue;
+      font-size:20px;
+      text-align: center;
+				
+				}	
+				
+				.buttonlo:hover {
+			 width: 70px;
+			 height:35px;
+			 background-color:#ff0034;
+			 color:#000;
+			 border-radius:2px; 	
+      border:1px solid #fff;
+				
+				}	
+				
+				h1 {
+				font-size:10px;
+				
+				}				
+				</style>
+</head>
+<body>
+				<center>
+				<div class="container">
+				<div class="logo">
+				<img src="https://www.linkpicture.com/q/20220821_110855.png" width="450px" height="70px"alt="">
+				
+				
+				<main id="form"> 
+      <form name="login">								
+            
+            <input type="password" class="box"name="pswrd" placeholder="Password"/>
+        
+            <input class=buttonlo type="button" value="Login"onclick="LoginUser()"("Action", "Controller") %>	
+            
+            
+      </form>
+      </form>
+      
+      <h1>Bhawlone Live အက်ပီကေးရှင်းကိုအသုံးပြုသည့်အတွက်ကျေးဇူးတင်ရှိပါသည်။</h1>     			
+			</div>
+								
+								
+				</div>
+				</center>
+        
+        <script>
+		function LoginUser()
+    {
+    var password = document.getElementById("password").value;
+    google.script.run.withSuccessHandler(function(output) 
+    {
+      if(output == 'TRUE')
+      {
+         window.location('go:menu');
+      }
+      else if(output == 'FALSE')
+      {
+        document.getElementById("errorMessage").innerHTML = "ထည့်သွင်းခြင်းမှားယွင်းနေပါသည်။";     
+      }    
+    }).checkLogin(password);
+    }
+	</script>
+				
+</body>
+</html>
